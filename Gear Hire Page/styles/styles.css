@@ -1,0 +1,55 @@
+/*Defaults*/
+html {
+    display: block;
+    margin: 0;
+    border-style: dashed;
+}
+
+/*Color*/
+body {
+/*    background-color: #08bcc0;*/
+    font-family: "Gill Sans";
+    }
+
+
+/*Positioning*/
+body {
+}
+
+#columnFirst {
+    float: left;
+    width: 33%;
+}
+#gear {
+        max-height: 600px;
+
+}
+
+
+#firstPage {
+    float: left;
+    width: 33%;
+}
+
+
+#secondPage {
+    float: left;
+    width: 33%;
+}
+
+/*Rate Class*/
+.dailyRate {
+    float: right;
+    width: 33%;
+}
+.gear {
+    float: left;
+    width: 66%;
+}
+h3 {float: left;
+width: 100%;
+}
+#gearList {
+    margin: 15px;
+}
+#rateList
