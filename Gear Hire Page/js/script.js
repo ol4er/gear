@@ -3,10 +3,15 @@
 /*eslint-env browser*/
 //    Cameras
 
-var cameras = [];
+var camera = [];
 var rates = [];
-
+var lens = [];
+var tripod = [];
+var stabilise = [];
+var projector = [];
 var lighting = [];
+var sound = [];
+var unit = [];
 
 
 var c1 = {equipName: "Canon EOS C100 HD Camera", 
@@ -72,7 +77,7 @@ var t4 = {equipName: "Digi Dolly V2 Kit",
 var c7 = {equipName: "Rockn V-7SDI 7\" LED Camera Top", 
             hireRate: "44", 
             type: "tripod"};
-var c7 = {equipName: "VF-4 LCD Viewfinder", 
+var c7b = {equipName: "VF-4 LCD Viewfinder", 
             hireRate: "44", 
             type: "tripod"};
 var t10 = {equipName: "Dinkum Systems Pack", 
@@ -191,7 +196,7 @@ var u4 = {equipName: "Wardrobe Kit",
 
 //Add new gear here
 //After creating equipment variable, add var to below list
-var gearList = [c1,c21,c15,c18,c20,c3,c4,c13,c12,c10];
+var gearList = [c1,c21,c15,c18,c20,c3,c4,c13,c12,c10,t1,t2,t3,t11,t4,t10,t9,t6,t13,c7,c7b,l1,l2,l5,l3,l12,l13,l4,l7,l7b,l14,l9,l10,l11,u1,u5,s8,s4,s3,s6,s1a,s1b,s1c,s1d,s2,s10,s7,s9,s2b,p1,u2,u3,u4];
 
 
 //gearList is an ARRAY of OBJECTS
@@ -203,36 +208,47 @@ var gearList = [c1,c21,c15,c18,c20,c3,c4,c13,c12,c10];
 //cameras = gearList.filter(gearList[2].type == "camera")
 
 var max = gearList.length;
-var gearArr;
 //Object.values(object var) returns the object in an array eg 
-function gearArrayFunc() {
-    var i = 0;
+function gearArrayFunc(x,y) {
     for(i = 0; i < max; i++){
-        gearArr = gearList[i].equipName;
-//make the thing a string
-        console.log(gearArr);
-        cameras.push(gearArr);
-//        break; //delete this to get all gear in array
-}
-}
+        var gearArr = gearList[i].equipName;
+        var gearType = gearList[i].type;
+        if(gearType == x){
+        y.push(gearArr);
+            }
+        }
+    }
+gearArrayFunc("camera",camera);
+gearArrayFunc("lens",lens);
+gearArrayFunc("tripod",tripod);
+gearArrayFunc("sound",sound);
+gearArrayFunc("stabilise",stabilise);
+gearArrayFunc("projector",projector);
+gearArrayFunc("lighting",lighting);
+gearArrayFunc("unit",unit);
 
-    gearArrayFunc();
+
 
 //var sound = [];
-
-
 //add all variables to sub category array, use loop to generate each list. with h3 head, then name & rate in p. 
 //    if xyz.type == "camera"){ 
 //    cameras.push(c100) 
 //    }
+//****************VVVVVV
+document.getElementById("camList").innerHTML = camera;
+document.getElementById("lensList").innerHTML = lens;
+document.getElementById("triList").innerHTML = tripod;
+document.getElementById("soundList").innerHTML = sound;
+document.getElementById("stabList").innerHTML = stabilise;
+document.getElementById("projectorList").innerHTML = projector;
+document.getElementById("lightingList").innerHTML = lighting;
+document.getElementById("unitList").innerHTML = unit;
 
-document.getElementById("gearList").innerHTML = cameras;
-console.log(lighting);
-//document.getElementById("gearList").innerHTML = lighting;
-// cant be innerHTML 2 of the same ID, the latter will overwrite
+//// cant be innerHTML 2 of the same ID, the latter will overwrite
+//
+//
+//document.getElementById("rateList").innerHTML = rates;
 
-
-document.getElementById("rateList").innerHTML = rates;
 
 
 //function equipment() {
