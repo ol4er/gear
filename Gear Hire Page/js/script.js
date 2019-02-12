@@ -191,26 +191,30 @@ var u4 = {equipName: "Wardrobe Kit",
 
 //Add new gear here
 //After creating equipment variable, add var to below list
-var gearList = [c1,c10,c21,c15];
+var gearList = [c1,c10,c21,c15,c18,c20,c3,c4];
+
+
+//gearList is an ARRAY of OBJECTS
+//each Object ie gearList[0] consists of {equipName,hireRate,type}
+//
 
 //testing output of data AGGRESIVELY
-alert(gearList[4].equipName);
-
+alert(gearList[6].equipName);
 //cameras = gearList.filter(gearList[2].type == "camera")
 
-    var max = gearList.length;
+var max = gearList.length;
+var gearArr;
 //Object.values(object var) returns the object in an array eg 
-function gearFunc() {
+function gearArrayFunc() {
+    var i = 0;
     for(i = 0; i < max; i++){
-    var gearArr = (Object.values(gearList[i]));
-    if (gearArr[2] == "camera"){
-    cameras.push(" <br>" + gearArr[0]); //god fix this plz
-    } else if (gearArr[2] == "lighting"){
-        lighting.push(gearArr[0]);}
-    else {return;}
+        gearArr = Object.values(gearList[i]);
+        cameras.push(gearArr);
 }
 }
-gearFunc();
+
+    gearArrayFunc();
+
 //var sound = [];
 
 
