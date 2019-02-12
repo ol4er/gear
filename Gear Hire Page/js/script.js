@@ -191,7 +191,7 @@ var u4 = {equipName: "Wardrobe Kit",
 
 //Add new gear here
 //After creating equipment variable, add var to below list
-var gearList = [c1,c10,c21,c15,c18,c20,c3,c4];
+var gearList = [c1,c21,c15,c18,c20,c3,c4,c13,c12,c10];
 
 
 //gearList is an ARRAY of OBJECTS
@@ -199,7 +199,7 @@ var gearList = [c1,c10,c21,c15,c18,c20,c3,c4];
 //
 
 //testing output of data AGGRESIVELY
-alert(gearList[6].equipName);
+//alert(gearList[6].equipName);
 //cameras = gearList.filter(gearList[2].type == "camera")
 
 var max = gearList.length;
@@ -208,8 +208,11 @@ var gearArr;
 function gearArrayFunc() {
     var i = 0;
     for(i = 0; i < max; i++){
-        gearArr = Object.values(gearList[i]);
+        gearArr = gearList[i].equipName;
+//make the thing a string
+        console.log(gearArr);
         cameras.push(gearArr);
+//        break; //delete this to get all gear in array
 }
 }
 
