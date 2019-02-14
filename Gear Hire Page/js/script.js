@@ -235,14 +235,14 @@ gearArrayFunc("unit",unit);
 //    cameras.push(c100) 
 //    }
 //****************VVVVVV
-document.getElementById("camList").innerHTML = camera;
-document.getElementById("lensList").innerHTML = lens;
-document.getElementById("triList").innerHTML = tripod;
-document.getElementById("soundList").innerHTML = sound;
-document.getElementById("stabList").innerHTML = stabilise;
-document.getElementById("projectorList").innerHTML = projector;
-document.getElementById("lightingList").innerHTML = lighting;
-document.getElementById("unitList").innerHTML = unit;
+document.getElementById("camList").textContent = camera;
+document.getElementById("lensList").textContent = lens;
+document.getElementById("triList").textContent = tripod;
+document.getElementById("soundList").textContent = sound;
+document.getElementById("stabList").textContent = stabilise;
+document.getElementById("projectorList").textContent = projector;
+document.getElementById("lightingList").textContent = lighting;
+document.getElementById("unitList").textContent = unit;
 
 //// cant be innerHTML 2 of the same ID, the latter will overwrite
 //
